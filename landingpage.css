@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background-image: url("https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2016/12/Cover_v2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-button-container {
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fixed-button-container {
+    opacity: 100%;
+    position: fixed;
+    bottom: 5px;
+    right: 0px; 
+}
+
+#buttons {
+  list-style-type: none;
+}
+#hanoiheading{
+  padding-top: 50px;
+  text-align: center;
+  visibility: visible;
+  font-family: sans-serif;
+  color: black;
+} 
+
+button {
+  padding: 20px;
+  width: 120px;
+  align-items: center;
+  color: #ffffff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 100ms;
+}
+button:hover {
+	transform: translateY(-5px)
+}
+#singlePlayer{
+  margin-right: auto;
+  width: 150px;
+}
+.popUpGame {
+  padding: 32px 64px;
+  height: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  align-items: center;
+  opacity: 0%;
+  text-align: center;
+  transition: transform 1s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+.popUpGame h1 {
+  margin-bottom: 24px;
+}
+
+.backdrop {
+  pointer-events: none;
+  height: 100vw;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0%;
+  transition: none;
+}
+
+.popUpGame.show {
+  z-index: 2;
+  opacity: 100%;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop.show {
+  pointer-events: none;
+  transition: none;
+  opacity: 50%;
+  z-index: 1;
+}
+
+.contributorsPopUp {
+  padding: 32px 64px;
+  height: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  align-items: center;
+  opacity: 0%;
+  text-align: center;
+  transition: transform 1s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+.contributorsPopUp.show {
+  z-index: 2;
+  opacity: 100%;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+#contributorsList{
+  list-style-type: none;
+  font-family:sans-serif;
+}
+.howToPlayPopUp {
+  padding: 32px 64px;
+  height: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  align-items: center;
+  opacity: 0%;
+  text-align: center;
+  transition: transform 1s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+.howToPlayPopUp.show {
+  z-index: 2;
+  opacity: 100%;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
