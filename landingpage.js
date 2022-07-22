@@ -3,7 +3,6 @@ const howToPlay = document.getElementById("howToPlay");
 const contributors = document.getElementById("contributors");
 const github = document.getElementById("github");
 const singlePlayer = document.getElementById("singlePlayer");
-const multiPlayer = document.getElementById("multiPlayer");
 const backdrop = document.getElementById("backdrop");
 
 
@@ -33,10 +32,6 @@ function howToPlayButton() {
   howToPlayScreen.classList.toggle("show");
 }
 
-function playMultiplayer() {
-  document.location.href = "multiplayer.html";
-}
-
 
 function playMenu() {
   const modalDiv = document.querySelector(".popUpGame");
@@ -47,7 +42,6 @@ function playMenu() {
 }
 playButton.addEventListener("click", playMenu);
 singlePlayer.addEventListener("click", playSinglePlayer);
-multiPlayer.addEventListener("click", playMenu);
 howToPlay.addEventListener("click", howToPlayButton);
 contributors.addEventListener("click", contributorsButton);
 github.addEventListener("click", githubButton);
