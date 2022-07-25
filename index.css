@@ -1,13 +1,10 @@
 body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
-    background-image: url("./assets/hanoi_background.png");
+    background-image: url("/assets/hanoi_background.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    background-position: center center;
-    background-attachment: fixed;
-    background-color: #464646;
 }
 h3, h4 {
     margin: 10px 0 30px 0;
@@ -19,6 +16,11 @@ h3, h4 {
 .nav-tabs li a {
     color: #777;
   }
+#logo{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .container {
     padding: 80px 120px;
 }
@@ -33,8 +35,9 @@ font-family: Montserrat, sans-serif;
     width: auto;
     height: auto;
     float: right;
-    position: relative;
-    right: 0;
+    position: absolute;
+    top: 0;
+    left: 72%;
 }
   .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
