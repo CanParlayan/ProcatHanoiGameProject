@@ -1,7 +1,7 @@
 body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
-    background-image: url("/assets/hanoi_background.png");
+    background-image: url("./assets/hanoi_background.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
