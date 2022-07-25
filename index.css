@@ -31,7 +31,7 @@ font-family: Montserrat, sans-serif;
     height: auto;
     float: right;
     position: relative;
-    right: 0px;
+    right: 0;
 }
   .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
