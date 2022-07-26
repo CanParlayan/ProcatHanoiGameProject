@@ -101,9 +101,19 @@ body {display: block}
 
 /* only when orientation is in portrait mode */
 @media only screen and (orientation:portrait) {
-    body {
-         display: none;
-    }
+    
+         .rotate{ 
+          display: block;
+}
+}
+
+
+
+
+@media (max-width: 768px) {
+  body {
+      height:100vh;
+  }
 }
 
 
