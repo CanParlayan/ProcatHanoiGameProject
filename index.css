@@ -15,6 +15,10 @@ h3, h4 {
 .nav-tabs li a {
     color: #777;
   }
+
+.rotate{
+  display:none;
+}
 .container {
     padding: 8%px 12%px;
 }
@@ -88,6 +92,18 @@ font-family: Montserrat, sans-serif;
   }
 .howToPlayButton {
     padding-top: 5%px;
+}
+
+
+
+/* for all screens */
+body {display: none;}
+
+/* only when orientation is in portrait mode */
+@media all and (orientation:landscape) {
+    body {
+         display: block;
+    }
 }
 
 
