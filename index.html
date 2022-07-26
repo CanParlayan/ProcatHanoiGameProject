@@ -19,7 +19,6 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <div class="rotate"><img src=".assets/rotate.png"></div>
     </div>
     <div class="navbar-toggler " id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -88,9 +87,8 @@
 
 <script>
   while(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-    if (screen.availHeight > screen.availWidth) {
-  while(true)
-  alert("Ekran Beyaz İse Lütfen Cihazınzı Yatay Konumuna Çeviriniz.")
+    if (screen.availWidth > screen.availHeight) {
+  alert("Lütfen Cihazınızı Yatay Konuma Getiriniz")
 }
   }
 

@@ -102,9 +102,9 @@ body {display: block}
 /* only when orientation is in portrait mode */
 @media only screen and (orientation:portrait) {
     
-         .rotate{ 
-          display: block;
-}
+         body{
+          display: none;
+         }
 }
 
 
