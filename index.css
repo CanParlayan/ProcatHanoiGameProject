@@ -97,12 +97,12 @@ font-family: Montserrat, sans-serif;
 
 
 /* for all screens */
-body {display: none;}
+body {display: block}
 
 /* only when orientation is in portrait mode */
-@media all and (orientation:landscape) {
+@media only screen and (orientation:portrait) {
     body {
-         display: block;
+         display: none;
     }
 }
 
