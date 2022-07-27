@@ -14,8 +14,9 @@
 </head>
 <body id="hanoi" data-spy="scroll" data-target=".navbar" data-offset="50">
 <a class="navbar-brand" href="https://www.callcenterhotel.com/"><img src="./assets/Logo-1.png" alt="logo"></a>
-<nav class="navbar navbar-default navbar-fixed-top">
 
+<nav class="navbar navbar-default navbar-fixed-top">
+  
 
   <div class="container-fluid">
     <div class="navbar-header">
@@ -26,12 +27,12 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Geliştiriciler
             <span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <ul style="color:black" class="dropdown-menu">
             <li>Gökçe Koçak</li>
             <div class="divider"></div>
             <li>Halil Can Parlayan</li>
             <div class="divider"></div>
-            <li>Kerem Aktaş</li>
+            <li >Kerem Aktaş</li>
             <div class="divider"></div>
             <li>Ömer Pirim</li>
             <div class="divider"></div>
@@ -42,15 +43,18 @@
       </ul>
     </div>
   </div>
+  
 </nav>
+
 <div id="buttons" class="container text-center">
-  <h3 style="color:white; font-size:20px; font-weight:5px; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Hanoi Tower</h3>
+  <h1 style="color:white;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"">Hanoi Tower</h3>
   <br>
   <div class="row">
     <div class="col-sm-4">
     </div>
-    <div style="padding-top: 100px" class="col-sm-4">
-      <div id="playButton">
+    <div style="padding-top: 100px" class="col-sm-4 text-center">
+     
+      <div style="padding-top:10px" id="playButton">
         <a href="#playToggle" data-toggle="collapse">
           <button type="button" class="btn">Oyna</button>
         </a>
@@ -60,7 +64,7 @@
         <a href="multiplayer.html"><button class="btn"><strong>Çok Oyunculu</strong></button></a>
 
       </div>
-      <div class="howToPlayButton">
+      <div style="padding-top:10px" class="howToPlayButton">
         <button class="btn" data-toggle="modal" data-target="#myModal"><strong>Nasıl Oynanır</strong></button>
       </div>
     </div>
@@ -89,10 +93,10 @@
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
     if (screen.availHeight> screen.availWidth) {
   alert("Lütfen Cihazınızı Yatay Konuma Getiriniz")
-  document.getElementByClassName("body").style.display = "none";
+  document.getElementsByClassName("body").style.display = "none";
 }
 else{
-  document.getElementByClassName("body").style.display = "block";
+  document.getElementsByClassName("body").style.display = "block";
 }
   }
 
