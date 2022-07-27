@@ -1,97 +1,96 @@
 body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-    background-image: url("./assets/hanoi_background.png");
-    background-size: cover;
-    overflow: hidden;
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #777;
+  background-image: url("./assets/hanoi_background.png");
+  background-size: cover;
+  overflow: hidden;
 }
 h3, h4 {
-    margin: 10%px 0 5%px 0;
-    letter-spacing: 10%px;
-    font-size: 15%px;
-    color: #111;
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: #111;
 }
 
 .nav-tabs li a {
-    color: #777;
-  }
+  color: #777;
+}
 
 .rotate{
-  display:none;
+display:none;
 }
 .container {
-    padding: 8%px 12%px;
+  padding: 80px 120px;
 }
 .navbar{
 font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 11%px !important;
-    letter-spacing: 4%px;
-    opacity: 0.9;
-    width: auto;
-    height: auto;
-    float: right;
-    position: relative;
-    right: 0;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  width: auto;
+  height: auto;
+  float: right;
+  position: relative;
+  right: 0;
 }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
+.navbar li a, .navbar .navbar-brand { 
+  color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
 
 .btn {
-    padding: 10%px 20%px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 50%px;
-    transition: .5s;
-        text-decoration: none;
-   }
+  padding: 10px 20px;
+  background-color: #333;
+  color: #f1f1f1;
+  transition: .5s;
+      text-decoration: none;
+ }
 .btn:hover, .btn:focus {
-    border: 1%px solid #333;
-    background-color: #fff;
-    color: #000;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
 }
 .modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30%px;
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
 }
 .modal-header, .modal-body {
-    padding: 10%px 10%px;
+  padding: 10px 10px;
 }
 .navbar li a, .navbar{ 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  .open .dropdown-toggle {
-    width: auto;
-    color: #fff;
-    background-color: #555 !important;
-  }
-  .dropdown-menu li{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  .dropdown-menu{
-    width: 179%px;
-    padding: 20%px;
-  }
+  color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.open .dropdown-toggle {
+  width: auto;
+  color: #fff;
+  background-color: #555 !important;
+}
+.dropdown-menu li{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.dropdown-menu{
+  width: 179px;
+  padding: 20px;
+}
 .howToPlayButton {
-    padding-top: 5%px;
+  padding-top: 5px;
 }
 
 
@@ -101,17 +100,17 @@ body {display: block}
 
 /* only when orientation is in portrait mode */
 @media only screen and (orientation:portrait) {
-    
-         body{
-          display: none;
-         }
+  
+       body{
+        display: none;
+       }
 }
 
 
 
 
 @media (max-width: 768px) {
-  body {
-      height:100vh;
-  }
+body {
+    height:100vh;
+}
 }
