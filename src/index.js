@@ -88,7 +88,7 @@ const DEFAULT_GAME = new class Game {
 
 				// Win condition met, start new game
 				if (towers.end.childElementCount === disk.count) {
-					alert("You Win!")
+					alert("Kazandınız!")
 					this.initStart(disk.count + 1)
 					input.value = disk.count + 1
 				}

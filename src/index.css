@@ -1,13 +1,13 @@
 :root {
 	--content-width: 325px;
-	--disk-color: #8cd1da;
-	--dark-gray: #3a3a3a;
+	--disk-color: #da8c8c;
+	--dark-gray: #071ef1;
 	--hover-gray: #00000010;
 }
 
 .dark {
 	filter: invert();
-	background: #0e0e0e;
+	background: #000000;
 }
 
 body {
@@ -141,3 +141,24 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-webkit-slider-runnable-track {
 	margin: 0 8px;
 }
+
+
+
+.btn {
+	-webkit-border-radius: 60;
+	-moz-border-radius: 60;
+	border-radius: 60px;
+	text-shadow: 1px 1px 3px #c4c4c4;
+	font-family: Arial;
+	color: #000000;
+	font-size: 13px;
+	background: #34d9d9;
+	padding: 10px 20px 10px 20px;
+	border: solid #1f628d 2px;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  .btn:hover {
+	text-decoration: none;
+  }
