@@ -145,15 +145,15 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 .btn {
-	-webkit-border-radius: 60;
-	-moz-border-radius: 60;
-	border-radius: 60px;
-	text-shadow: 1px 1px 3px #c4c4c4;
+	-webkit-border-radius: 30;
+	-moz-border-radius: 30;
+	border-radius: 30px;
+	text-shadow: 1px 1px 1px #c4c4c4;
 	font-family: Arial;
 	color: #000000;
 	font-size: 13px;
 	background: #34d9d9;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 20px 10px 10px;
 	border: solid #1f628d 2px;
 	text-decoration: none;
 	cursor: pointer;
