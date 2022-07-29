@@ -1,257 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Tower Of Hanoi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-  
-<style>
-
-
-
-.container {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.container-loading {
-  background: #000;
-  opacity: 1;
-  transition: opacity ease 1s;
-  z-index: 5;
-  pointer-events: none;
-}
-.container-loading .loading-text {
-  display: inline-block;
-  position: absolute;
-  color: #fff;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%,-50%);
-  font-family: arial;
-  font-size: 50pt;
-}
-.container-loading .dot {
-  width: 10px;
-  height: 10px;
-  margin: 20px 5px 0px 5px;
-  background: #fff;
-  border-radius: 100%;
-  display: inline-block;
-  animation: dot-fade linear infinite 1s alternate;
-}
-.container-loading .dot:nth-child(3) {
-  animation-delay: 0s;
-}
-.container-loading .dot:nth-child(2) {
-  animation-delay: 0.5s;
-}
-.container-loading .dot:nth-child(1) {
-  animation-delay: 1s;
-}
-@keyframes dot-fade {
-  0% {
-    transform: scale(1,1) translate(0px,0px);
-  }
-  50% {
-    transform: scale(1.8,1.8) translate(0px,0px);
-  }
-  100% {
-    transform: scale(0,0) translate(0px,0px);
-  }
-}
-.container-game {
-  z-index: 1;
-}
-#game-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.container-overlay {
-  z-index: 2;
-}
-.overlay-github {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(255,255,255,0.4);
-  color: #fff;
-  padding: 5px 10px 10px 5px;
-  border-radius: 0px 0px 5px 0px;
-  opacity: 0.5;
-  transition: opacity ease 1s;
-  font-weight: bold;
-}
-.overlay-github:hover {
-  opacity: 1;
-}
-.overlay-author {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: #fff;
-  font-style: italic;
-  padding: 5px;
-}
-.overlay-btn {
-  margin: 5px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity ease 1s;
-}
-.overlay-btn:hover {
-  opacity: 1;
-}
-.overlay-settings {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 5px;
-  width: 30px;
-  cursor: pointer;
-  transform: rotate(0deg);
-  opacity: 0.5;
-  transition: transform ease 2s, opacity ease 1s;
-}
-.overlay-settings:hover {
-  transform: rotate(360deg);
-  opacity: 1;
-}
-.overlay-auto {
-  position: absolute;
-  right: 80px;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: content-box;
-}
-.overlay-auto:hover {
-  opacity: 1;
-}
-.overlay-auto {
-  background-image: url(./assets/pause.svg);
-}
-.overlay-auto[paused] {
-  background-image: url(./assets/play.svg);
-}
-.overlay-plus {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-.overlay-minus {
-  position: absolute;
-  right: 40px;
-  bottom: 0;
-}
-.container-modal {
-  z-index: 6;
-  pointer-events: all;
-  opacity: 1;
-}
-.container-modal:empty {
-  opacity: 0;
-  pointer-events: none;
-}
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.modal-background {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  filter: blur(300px);
-  opacity: 0.6;
-  cursor: pointer;
-}
-.modal-inner {
-  width:auto
-}
-.container-game[completed] {
-  animation-name: completed;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-play-state: running;
-  animation-direction: normal;
-}
-
-@keyframes completed {
-  0% {
-    transform: scale(1,1);
-  }
-  50% {
-    transform: scale(1.7,1.7);
-  }
-  100% {
-    transform: scale(1,1);
-  }
-}
-</style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#ffffff" />
+	<meta name="description" content="A minimal time-passing implementation of the tower of hanoi game" />
+	<link rel="shortcut icon" href="./src/app/icons/icon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./src/app/icons/icon_192.png">
+	<link rel="stylesheet" href="./src/multiplayer.css" />
+	<link rel="manifest" href="./manifest.json" />
+	<title>Tower of Hanoi</title>
+	<a class="navbar-brand" href="https://www.callcenterhotel.com/"><img src="./assets/Logo-1.png" alt="logo"></a>
 </head>
+
+
+
 <body>
-<div class="container container-loading">
-  <div class="loading-text">Yükleniyor<div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-</div>
-<div class="container container-game">
-  <canvas id="game-canvas"></canvas>
-</div>
-<div class="container container-overlay">
-  <a href="https://github.com/CanParlayan/ProcatHanoiGameProject"><div class="overlay-github">Oyunun Github Adresi</div></a>
-  <div class="overlay-author">Made by procat</div>
-  <div class="overlay-btn overlay-auto" src="./assets/play.svg" paused></div>
-  <img class="overlay-btn overlay-minus" src="./assets/minus-square.svg">
-  <img class="overlay-btn overlay-plus" src="./assets/plus-square.svg">
+	<main class="content-container">
+		<section class="tower" id="start"></section>
+		<section class="tower" id="offset"></section>
+		<section class="tower" id="end"></section>
+	</main>
+	<aside class="info-options">
+		<input id="disk-slider" type="range" max="5" min="5" value="5" />
+		<section>
+			<div class="info">
+				<div class="moves text">Toplam Hareket: <span class="count"></span></div>
+				<div class="disks text">Diskler: <span class="count"></span></div>
+			</div>
+			<div class="options">
 
-</div>
-<div class="container container-modal"></div>
-<div id="tab-one">TAB ONE</div>
-<template id="modal">
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-inner">
-      <div class="modal-title">$title$</div>
-      <div class="modal-content">$content$</div>
-    </div>
-  </div>
-</template>
-<script src="./tower_of_hanoi.min.js" async></script>
+				<div class="icon hash"></div>
+				<div class="icon moon"></div>
+			</div>
+		</section>
+	</aside>
+	<script src="./src/index.js"></script>
+	<script>
+		if ("serviceWorker" in navigator)
+			navigator.serviceWorker.register("./sw.js")
+				.then(registration =>
+					console.log(`Registered sw.js @${registration.scope}`)
+				)
+	</script>
 
+<a href="index.html"><button class="btn"><strong>Ana Sayfaya Geri Dön </strong></button></a>
 </body>
+
 </html>
-
-
-
-
-
-
-<html>
-    <head>
-       <title></title>
-    </head>
-    <body background="https://imgyukle.com/f/2022/07/23/VtcUAI.webp">
-
-      
-
-
- 
-    </body>
- </html>
-
-
- 

@@ -99,14 +99,9 @@ main.content-container {
 	width: 36px;
 }
 
-.icon:hover {
-	cursor: pointer;
-	background-color: var(--hover-gray);
-}
 
-.icon.reset {
-	background-image: url("./svg/reset-icon.svg");
-}
+
+
 
 
 
@@ -126,19 +121,8 @@ input[type=range]:focus {
 	outline: none;
 }
 
-input[type=range]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	border: solid 2px var(--dark-gray);
-	background-color: #fff;
-	background-image: linear-gradient(45deg, #00000050 50%, #ffffff80 50%);
-}
 
-input[type=range]::-webkit-slider-runnable-track {
-	margin: 0 8px;
-}
+
 
 
 
