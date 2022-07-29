@@ -1,7 +1,7 @@
 {
 	"name": "Tower of Hanoi",
 	"short_name": "Hanoi",
-	"start_url": "./",
+	"start_url": "./index.html",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"theme_color": "#ffffff",

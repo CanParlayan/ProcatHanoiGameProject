@@ -16,9 +16,8 @@ body {
 	padding: 0;
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	user-select: none;
 }
 
@@ -58,6 +57,7 @@ main.content-container {
 	display: flex;
 	align-items: center;
 }
+
 
 .disk.show-text {
 	color: #fff

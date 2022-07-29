@@ -120,6 +120,12 @@ input[type=range] {
 input[type=range]:focus {
 	outline: none;
 }
+#logo{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
 
 
 
