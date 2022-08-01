@@ -24,7 +24,7 @@
 		<section class="tower" id="end"></section>
 	</main>
 	<aside class="info-options">
-		<input id="disk-slider" type="range" min="3" max="7" value="3" />
+		<input id="disk-slider" type="range" min="5" max="5" value="5" />
 		<section>
 			<div class="info">
 				<div class="moves text">Toplam Hareket: <span class="count"></span></div>
@@ -47,6 +47,21 @@
 	</script>
 
 <a href="index.html"><button class="btn"><strong>Ana Sayfaya Geri Dön </strong></button></a>
+
+<script>
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+		if (screen.availHeight> screen.availWidth) {
+	  alert("Lütfen Cihazınızı Yatay Konuma Getiriniz")
+	  document.getElementsByClassName("body").style.display = "none";
+	}
+	else{
+	  document.getElementsByClassName("body").style.display = "block";
+	}
+	  }
+	
+	
+	
+	</script>
 </body>
 
 </html>

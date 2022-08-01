@@ -26,7 +26,7 @@ const DEFAULT_GAME = new class Game {
 		
 	}
 
-	initStart(diskCount = 4) {
+	initStart(diskCount = 5) {
 		const { towers, options, info } = this.nodes
 
 		// Reset each tower to contain no disks
@@ -38,8 +38,7 @@ const DEFAULT_GAME = new class Game {
 		// Create the disks and add them to the start tower
 		for (let index = 0; index < diskCount; index++) {
 			const disk = document.createElement("div")
-
-			disk.className = "disk"
+		    disk.className = "disk"
 			document.body.classList.contains("dark") && disk.classList.add("dark")
 			options.hash.classList.contains("show-text") && disk.classList.add("show-text")
 
@@ -51,7 +50,7 @@ const DEFAULT_GAME = new class Game {
 
 		towers.all.forEach(tower => {
 			if (tower !== towers.start) {
-				tower.style.height = `${towers.start.clientHeight - 14}px`
+				tower.style.height = `${towers.start.clientHeight - 10}px`
 			}
 		})
 
