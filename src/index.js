@@ -42,7 +42,7 @@ const DEFAULT_GAME = new class Game {
 			document.body.classList.contains("dark") && disk.classList.add("dark")
 			options.hash.classList.contains("show-text") && disk.classList.add("show-text")
 
-			disk.dataset.size = disk.innerText = index + 1
+			disk.dataset.size = disk.innerText = index 
 			disk.style.width = `calc(${20 + ((85 / diskCount) * index)}% - 7.33px)`
 
 			towers.start.insertBefore(disk, towers.start.firstChild)
@@ -122,4 +122,6 @@ const DEFAULT_GAME = new class Game {
 				document.body.classList.contains("dark") ? "#0e0e0e" : "#ffffff")
 		}
 	}
+
+	
 }()
