@@ -1,8 +1,10 @@
+
 :root {
 	--content-width: 325px;
 	--disk-color: #da8c8c;
 	--dark-gray: #071ef1;
 	--hover-gray: #00000010;
+
 }
 
 .dark {
@@ -150,3 +152,10 @@ input[type=range]:focus {
   .btn:hover {
 	text-decoration: none;
   }
+
+  
+
+
+
+
+	

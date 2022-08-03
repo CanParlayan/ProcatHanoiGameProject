@@ -40,7 +40,7 @@
 	<script src="./src/index.js"></script>
 	<script>
 		if ("serviceWorker" in navigator)
-			navigator.serviceWorker.register("./sw.js")
+			navigator.serviceWorker.register("./src/game.js")
 				.then(registration =>
 					console.log(`Registered sw.js @${registration.scope}`)
 				)
