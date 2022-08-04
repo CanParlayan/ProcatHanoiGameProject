@@ -37,7 +37,8 @@ main.content-container {
 	flex: 0.3;
 	flex-direction: column-reverse;
 	align-items: center;
-	padding: 7px 0;
+	padding: 7px 0px;
+	height: 123px;
 }
 
 .tower:hover {
@@ -127,6 +128,44 @@ input[type=range]:focus {
 	top: 0;
 	left: 0;
 	z-index: 100;
+}
+#name{
+	position: fixed;
+	top: 8%;
+	left: 931px;
+	right: 0%;
+	height: 100px;
+	z-index: 100;
+	font-size: 170%;
+	font-family: 'Roboto',courier;
+	color: rgb(255, 0, 0);
+}
+
+.pesetbuton {
+	box-shadow:inset 50px 44px 0px 1px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:21px;
+	border:7px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 15px;
+	text-decoration:none;
+	text-shadow:1px -1px 50px #2b665e;
+	top: 8%;
+	
+}
+.pesetbuton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.pesetbuton:active {
+	position:relative;
+	top:1px;
 }
 
 

@@ -13,49 +13,53 @@
 	<link rel="manifest" href="./manifest.json" />
 	<a id="logo" href="https://www.callcenterhotel.com/"><img src="./src/assets/Logo-1.png" alt="logo"></a>
 	<title>Tower of Hanoi</title>
-
 </head>
 
 
 
 <body>
-
-	<script>
-	let uName = prompt("İsminizi Giriniz");
-	document.write(uName);
-		
-  </script>
+	<div id="name"></div>
 	<main class="content-container">
 		<section class="tower" id="start"></section>
 		<section class="tower" id="offset"></section>
 		<section class="tower" id="end"></section>
 	</main>
 	<aside class="info-options">
-		<input id="disk-slider" type="range" max="5" min="5" value="5" />
+		
 		<section>
 			<div class="info">
 				<div class="moves text">Toplam Hareket: <span class="count"></span></div>
-				<div class="disks text">Diskler: <span class="count"></span></div>
+				<div class="disks text">Süre: <span class="count"></span></div>
 			</div>
 			<div class="options">
-
 				<div class="icon hash"></div>
 				<div class="icon moon"></div>
 				
 			</div>
+
 		</section>
 	</aside>
-	<script src="./src/index.js"></script>
 	<script>
+		if (window.localStorage.getItem("name") == null){
+			let uName = prompt("İsminizi Giriniz");
+		window.localStorage.setItem("name", uName);
+		document.getElementById("name").innerHTML = window.localStorage.getItem("name");
+		}
+		else{
+			document.getElementById("name").innerHTML = window.localStorage.getItem("name");	
+		}
+		
+		
+	</script>
+		<script src="./src/index.js">
 		if ("serviceWorker" in navigator)
-			navigator.serviceWorker.register("./src/game.js")
+			navigator.serviceWorker.register("./sw.js")
 				.then(registration =>
 					console.log(`Registered sw.js @${registration.scope}`)
 				)
-	</script>
 
-<a href="index.html"><button class="btn"><strong>Ana Sayfaya Geri Dön </strong></button></a>
-<script>
+	
+	document.write(uName);
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
 		if (screen.availHeight> screen.availWidth) {
 	  alert("Lütfen Cihazınızı Yatay Konuma Getiriniz")
@@ -68,7 +72,10 @@
 	
 	
 	
+	
 	</script>
+
+<a href="index.html" class="pesetbuton">Pes Et</a>
 
 </body>
 
