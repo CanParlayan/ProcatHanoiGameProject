@@ -1,6 +1,6 @@
 const CACHE_NAME = "hanoi_v1.1"
 const STATIC_ASSETS = [
-	"index.html",
+	"lobby.html",
 	"src/index.css",
 	"src/index.js",
 	"src/svg/hash-icon.svg",

@@ -1,0 +1,13 @@
+{
+  "name": "untitled9",
+  "version": "1.0.0",
+  "dependencies": {
+    "@socket.io/redis-adapter": "^7.2.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "redis": "^4.2.0",
+    "redis-server": "^1.2.2",
+    "socket.io": "^4.5.1"
+  }
+}
