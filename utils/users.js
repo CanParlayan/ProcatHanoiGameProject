@@ -1,9 +1,13 @@
 const users = [];
+var db = require('../db');
+
 
 // Join user to chat
 function userJoin(id, username, room) {
   const user = { id, username, room };
-
+  db.query('INSERT INTO userInfo(username, roomID) VALUES (?, ?)', [username, room], (err, result) => {
+    err ? console.log(err) : console.log(result);
+  })
   users.push(user);
 
   return user;

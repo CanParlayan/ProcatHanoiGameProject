@@ -51,6 +51,9 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
     <script>
+      socket.on('createRoom', (roomName, callback) => {
+
+      }
       document.getElementById('playButton').onclick = function() {
         if (userList.childNodes.length < 2) {
           alert("You need at least 2 players to play");

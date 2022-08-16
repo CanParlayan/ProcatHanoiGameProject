@@ -14,22 +14,10 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+var db = require('./db');
 
 
-const mysql = require('mysql')
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'cancan',
-  database: 'hanoi'
-})
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
-  console.log('CONNECTED!');
-});
+
 
 // Set static folder
 app.use(express.static(path.join(__dirname, )));
@@ -45,15 +33,23 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit("message", formatMessage(botName, "Welcome to Lobby"));
-
+    socket.emit("message", formatMessage(botName, "Welcome to the Lobby " + user.room));
     // Broadcast when a user connects
+    if(user.username ==="burak" ){
+    socket.broadcast
+        .to(user.room)
+        .emit(
+            "message",
+            formatMessage(botName, "noluyo burda")
+        );}
+
     socket.broadcast
         .to(user.room)
         .emit(
             "message",
             formatMessage(botName, `${user.username} has joined the lobby`)
         );
+
 
     // Send users and room info
     io.to(user.room).emit("roomUsers", {
@@ -65,7 +61,6 @@ io.on("connection", (socket) => {
   // Listen for chatMessage
   socket.on("chatMessage", (msg) => {
     const user = getCurrentUser(socket.id);
-
     io.to(user.room).emit("message", formatMessage(user.username, msg));
   });
 
@@ -88,6 +83,6 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8182;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

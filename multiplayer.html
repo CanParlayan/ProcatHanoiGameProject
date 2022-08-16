@@ -40,18 +40,17 @@
 		</section>
 	</aside>
 	
-<a href="lobby.html" class="pesetbuton">Pes Et</a>
+<button onclick="confirmAction()" class="pesetbuton">Pes Et</button>
 	<script>
-		if (window.localStorage.getItem("name") == null){
-			let uName = prompt("İsminizi Giriniz");
-		window.localStorage.setItem("name", uName);
-		document.getElementById("name").innerHTML = window.localStorage.getItem("name");
-		}
-		else{
-			document.getElementById("name").innerHTML = window.localStorage.getItem("name");	
-		}
-		
-		
+		let pes = document.getElementsByClassName("pesetbuton");
+		function confirmAction() {
+		pes.addEventListener("click", function () {
+			let confirmAction = confirm("Are you sure to execute this action?");
+			if (confirmAction) {
+				window.location.href = "lobby.html";
+			} else {
+				alert("Action canceled");
+				}})}
 	</script>
 		<script src="./src/index.js">
 		if ("serviceWorker" in navigator)
