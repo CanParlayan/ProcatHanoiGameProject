@@ -18,6 +18,78 @@
 
 
 <body>
+
+	
+
+	
+	<div id="wrapper">
+		<input type="checkbox" id="button1" checked>
+
+		<label for="button2" data-title="PLAY">STOP</label>
+		<div class="digit dp100000 d6">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+		<div class="digit dp10000">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+		<div class="separator">
+		  <div class="dot top"></div>
+		  <div class="dot bottom"></div>
+		</div>
+		<div class="digit dp1000 d6">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+		<div class="digit dp100">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+		<div class="separator">
+		  <div class="dot top"></div>
+		  <div class="dot bottom"></div>
+		</div>
+		<div class="digit dp10">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+		<div class="digit dp1">
+		  <div class="particle top"></div>
+		  <div class="particle top right"></div>
+		  <div class="particle top left"></div>
+		  <div class="particle middle"></div>
+		  <div class="particle bottom right"></div>
+		  <div class="particle bottom left"></div>
+		  <div class="particle bottom"></div>
+		</div>
+	  </div>
+	
 	<div id="name"></div>
 	<main class="content-container">
 		<section class="tower" id="start"></section>
@@ -25,11 +97,13 @@
 		<section class="tower" id="end"></section>
 	</main>
 	<aside class="info-options">
+
+		
 		
 		<section>
 			<div class="info">
 				<div class="moves text">Toplam Hareket: <span class="count"></span></div>
-				<div class="disks text">Süre: <span class="count"></span></div>
+				<div class="disks text">Disk Sayısı: <span class="count"></span></div>
 			</div>
 			<div class="options">
 				<div class="icon hash"></div>
@@ -39,7 +113,25 @@
 
 		</section>
 	</aside>
+
+	<button class="sendbuton" onclick="sendMessage()">Rapor Gönder</button>
+
+	<script>
+		function sendMessage() {
+		  var request = new XMLHttpRequest();
+		  request.open("POST", "https://discord.com/api/webhooks/1009047430865637376/jCUwqekh4F6Ed5YBR6FM5MX7w0D8qFN9DQHdGLpbwlwxyrsJHN5nqubuLGr4f6Kj1Iga");
 	
+		  request.setRequestHeader('Content-type', 'application/json');
+	
+		  var params = {
+			username: "Procat Tower Of Hanoi Report System",
+			avatar_url: "",
+			content: "Oda 1 adlı odada raporlanan bir oyuncu bulundu @everyone"
+		  }
+	
+		  request.send(JSON.stringify(params));
+		}
+	  </script>
 <button onclick="confirmAction()" class="pesetbuton">Pes Et</button>
 	<script>
 		let pes = document.getElementsByClassName("pesetbuton");
@@ -51,8 +143,14 @@
 			} else {
 				alert("Action canceled");
 				}})}
+
+				window.onbeforeunload = function() {
+  return "Eğer Sayfayı Yenilersen Oyun Gİdecek Ve İlerlemelerin İptal Olacak?";
+};
 	</script>
 		<script src="./src/index.js">
+
+
 		if ("serviceWorker" in navigator)
 			navigator.serviceWorker.register("./sw.js")
 				.then(registration =>
