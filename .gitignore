@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+*.log
+npm-debug.log*
+.cache/
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
